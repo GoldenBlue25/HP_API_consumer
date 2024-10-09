@@ -1,0 +1,93 @@
+<mvc:View
+    controllerName="sap.ui.demo.fiori2.controller.Detail"
+    xmlns="sap.uxap"
+    xmlns:m="sap.m"
+    xmlns:f="sap.f"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+>
+    <ObjectPageLayout preserveHeaderStateOnScroll="true">
+        <headerTitle>
+            <ObjectPageDynamicHeaderTitle>
+                <heading>
+                    <m:Title
+                        text="{name}"
+                    />
+                </heading>
+            </ObjectPageDynamicHeaderTitle>
+        </headerTitle>
+
+        <headerContent>
+            <m:FlexBox
+                fitContainer="true"
+                alignItems="Stretch"
+            >
+                <m:Avatar
+                    src="{image}"
+                    displaySize="XL"
+                    class="sapUiSmallMarginEnd"
+                    displayShape="Square"
+                    imageFitType="Contain"
+                />
+                <m:VBox
+                    justifyContent="Center"
+                    class="sapUiMediumMarginEnd"
+                >
+                    <m:Label text="House" />
+                    <m:Text text="{house}" />
+                </m:VBox>
+                <m:VBox
+                    justifyContent="Center"
+                    class="sapUiMediumMarginEnd"
+                >
+                    <m:Label text="Ancestry" />
+                    <m:Text text="{ancestry}" />
+                </m:VBox>
+                <m:VBox
+                    justifyContent="Center"
+                    class="sapUiMediumMarginEnd"
+                >
+                    <m:Label text="Alive" />
+                    <m:Text text="{alive}" />
+                </m:VBox>
+            </m:FlexBox>
+        </headerContent>
+
+        <sections>
+            <ObjectPageSection>
+                <subSections>
+                    <ObjectPageSubSection title="Wand" >
+                        <blocks>
+                            <form:SimpleForm labelSpanM="12" >
+                                <form:content>
+                                    <m:Label text="Core" />
+                                    <m:Text text="{core}" />    
+                                    <m:Label text="Wood" />
+                                    <m:Text text="{wood}" />
+                                    <m:Label text="Length" />
+                                    <m:Text text="{length}" />
+                                </form:content>
+                            </form:SimpleForm>
+                        </blocks>
+                    </ObjectPageSubSection>
+                    <ObjectPageSubSection title="Other information">
+                        <blocks>
+                            <form:SimpleForm labelSpanM="12">
+                                <form:content>
+                                    <m:Label text="Patronus" />
+                                    <m:Text text="{patronus}" />
+                                    <m:Label text="Species" />
+                                    <m:Text text="{species}" />
+                                    <m:Label text="Date Of Birth" />
+                                    <m:Text text="{dateOfBirth}" />
+                                </form:content>
+                            </form:SimpleForm>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
+    </ObjectPageLayout>
+
+    
+</mvc:View>

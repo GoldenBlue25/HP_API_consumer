@@ -1,0 +1,21 @@
+{
+  "name": "tutorial.fiori2",
+  "version": "1.0.0",
+  "private": true,
+  "author": "SAP SE",
+  "scripts": {
+    "start": "ui5 serve -o index.html",
+    "build": "ui5 build"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^4"
+  },
+  "dependencies": {
+    "@sap/ux-ui5-tooling": "^1.15.0"
+  },
+  "ui5": {
+    "dependencies": [
+      "@sap/ux-ui5-tooling"
+    ]
+  }
+}

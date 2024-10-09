@@ -1,0 +1,40 @@
+<mvc:View
+    controllerName="sap.ui.demo.fiori2.controller.Master"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:mvc="sap.ui.core.mvc"
+>
+    <f:DynamicPage>
+        <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title text="Harry Potter Characters" />
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+
+        <f:content>
+            <Table items="{/Characters}">
+                <columns>
+                    <Column>
+                        <Text text="Name" />
+                    </Column>
+                    <Column hAlign="End">
+                        <Text text="House" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem
+                        type="Navigation"
+                        press=".onListItemPress"
+                    >
+                        <cells>
+                            <ObjectIdentifier title="{name}" />
+                            <ObjectAttribute text="{house}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>
